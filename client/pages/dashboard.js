@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import 'tailwindcss/tailwind.css';
 
 export default function Dashboard() {
   const [selectedDate, setSelectedDate] = useState(() => {
