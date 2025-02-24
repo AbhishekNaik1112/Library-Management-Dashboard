@@ -102,7 +102,7 @@ async function main() {
   }
   await Promise.all(issuancePromises);
 
-  console.log("Seeded added");
+  console.log("Seeds added");
 }
 
 main()
