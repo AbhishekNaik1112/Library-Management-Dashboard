@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "tailwindcss/tailwind.css";
+import 'tailwindcss/tailwind.css';
 
 export default function Dashboard() {
   const [selectedDate, setSelectedDate] = useState(() => {
@@ -8,17 +8,15 @@ export default function Dashboard() {
   });
   const [data, setData] = useState([]);
 
-  const encodedApiKey = btoa(process.env.NEXT_PUBLIC_API_KEY);
-
   const fetchData = async (date) => {
     try {
       const res = await fetch(
-        `https://library-management-dashboard.onrender.com/issuance/outstanding?date=${date}`,
+        `http://localhost:5000/issuance/outstanding?date=${date}`,
         {
           headers: {
-            "x-api-key": encodedApiKey,
+            "x-api-key": process.env.NEXT_PUBLIC_API_KEY,
           },
-        }
+        },
       );
       const json = await res.json();
       setData(json);
