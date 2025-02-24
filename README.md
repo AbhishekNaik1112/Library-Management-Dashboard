@@ -80,4 +80,4 @@ A full-stack library management system featuring a dashboard to view pending boo
 ## Deployed Links
 
 - **Server:** [Server Link](https://library-management-dashboard.onrender.com)
-- **Client:** [Client Link](https://library-management-dashboard.vercel.app/)
+- **Client:** [Client Link](https://library-management-dashboard.vercel.app)
