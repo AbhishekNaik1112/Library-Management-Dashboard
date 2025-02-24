@@ -8,13 +8,15 @@ export default function Dashboard() {
   });
   const [data, setData] = useState([]);
 
+  const encodedApiKey = btoa(process.env.NEXT_PUBLIC_API_KEY);
+
   const fetchData = async (date) => {
     try {
       const res = await fetch(
         `https://library-management-dashboard.onrender.com/issuance/outstanding?date=${date}`,
         {
           headers: {
-            "x-api-key": process.env.NEXT_PUBLIC_API_KEY,
+            "x-api-key": encodedApiKey,
           },
         }
       );
